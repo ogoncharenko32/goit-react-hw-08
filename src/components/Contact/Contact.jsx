@@ -50,10 +50,10 @@ const Contact = ({ name, number, id }) => {
 
   const handleSubmit = (contact, actions) => {
     dispatch(editContact(contact));
-    dispatch(fetchContacts());
 
     onCloseModal();
     actions.resetForm();
+    // dispatch(fetchContacts());
   };
 
   return (

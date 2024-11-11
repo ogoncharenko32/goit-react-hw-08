@@ -54,6 +54,12 @@ export const contactsSlice = createSlice({
       .addCase(editContact.fulfilled, (state, action) => {
         state.contacts.loading = false;
         state.contacts.error = null;
+
+        const updatedContact = action.payload;
+        state.contacts.items = state.contacts.items.map(contact =>
+          contact.id === updatedContact.id ? updatedContact : contact
+        );
+
         toast('Contact successfully changed');
       })
       .addCase(editContact.rejected, (state, action) => {

@@ -54,7 +54,6 @@ export const apiEditContact = async contact => {
     `/contacts/${contact.id}`,
     user
   );
-  console.log(data);
   return data;
 };
 
