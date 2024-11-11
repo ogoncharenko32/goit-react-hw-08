@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { login, logout, refreshUser, register } from './operations';
-import { useNavigate } from 'react-router-dom';
 
 const INITIAL_STATE = {
   user: {

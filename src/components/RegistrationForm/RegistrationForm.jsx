@@ -13,7 +13,7 @@ const FeedbackSchema = Yup.object().shape({
     .required('Required'),
   email: Yup.string().email('Invalid email format').required('Required'),
   password: Yup.string()
-    .min(8, 'Password length must be at least 8 characters')
+    .min(8, 'Pass length must be at least 8 characters')
     .required('Required'),
 });
 

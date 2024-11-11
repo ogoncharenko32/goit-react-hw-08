@@ -5,12 +5,11 @@ import clsx from 'clsx';
 import css from './LoginForm.module.css';
 import { useDispatch } from 'react-redux';
 import { login } from '../../redux/auth/operations';
-import { useNavigate } from 'react-router-dom';
 
 const FeedbackSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email format').required('Required'),
   password: Yup.string()
-    .min(8, 'Password length must be at least 8 characters')
+    .min(8, 'Pass length must be at least 8 characters')
     .required('Required'),
 });
 

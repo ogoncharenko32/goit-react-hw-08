@@ -45,6 +45,19 @@ export const apiAddContacts = async contact => {
   return data;
 };
 
+export const apiEditContact = async contact => {
+  const user = {
+    name: contact.name,
+    number: contact.number,
+  };
+  const { data } = await contactsInstance.patch(
+    `/contacts/${contact.id}`,
+    user
+  );
+  console.log(data);
+  return data;
+};
+
 export const apiDeleteContact = async id => {
   const { data } = await contactsInstance.delete(`/contacts/${id}`);
   return data;

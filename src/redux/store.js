@@ -16,11 +16,6 @@ import { contactsReducer } from './contacts/slice';
 import { filterReducer } from './filters/slice';
 import { authReducer } from './auth/slice';
 
-// const contactsConfig = {
-//   key: 'contactsKey',
-//   storage,
-// };
-
 const authConfig = {
   key: 'auth',
   storage,

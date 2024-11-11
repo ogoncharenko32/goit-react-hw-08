@@ -4,7 +4,6 @@ import Contact from '../Contact/Contact';
 import { selectLoading, selectError } from '../../redux/contacts/selectors.js';
 import { useSelector } from 'react-redux';
 import { selectFilteredContacts } from '../../redux/filters/slice.js';
-import { selectIsLoggedIn } from '../../redux/auth/selectors.js';
 
 const ContactList = () => {
   const contacts = useSelector(selectFilteredContacts);
