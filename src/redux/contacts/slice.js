@@ -84,7 +84,7 @@ export const contactsSlice = createSlice({
       }),
   reducers: {
     clearContacts: state => {
-      state.items = [];
+      state.contacts.items = [];
     },
   },
 });
