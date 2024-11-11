@@ -1,0 +1,23 @@
+.wrapper {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.link {
+    display: inline-flex;
+    padding: 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 22px;
+    transition: all 0.3s;
+}
+
+.active {
+    color: white;
+    border-color: white;
+}
+
+.text {
+    font-size: 22px;
+}
