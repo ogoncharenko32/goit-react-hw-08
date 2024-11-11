@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import css from './LoginForm.module.css';
 import { useDispatch } from 'react-redux';
 import { login } from '../../redux/auth/operations';
+import { Button } from '@mui/material';
 
 const FeedbackSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email format').required('Required'),
@@ -65,9 +66,9 @@ const LoginForm = () => {
             component="span"
           />
         </div>
-        <button className={clsx(css.formBtn)} type="submit">
+        <Button variant="contained" type="submit">
           LogIn
-        </button>
+        </Button>
       </Form>
     </Formik>
   );

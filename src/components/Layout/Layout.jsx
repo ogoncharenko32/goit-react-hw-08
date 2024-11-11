@@ -1,9 +1,11 @@
-import AppBar from '../AppBar/AppBar';
+import ResponsiveAppBar from '../AppBar/AppBar';
+import ButtonAppBar from '../AppBar/AppBar';
+// import AppBar from '../AppBar/AppBar';
 
 const Layout = ({ children }) => {
   return (
     <div>
-      <AppBar />
+      <ResponsiveAppBar />
       {children}
     </div>
   );

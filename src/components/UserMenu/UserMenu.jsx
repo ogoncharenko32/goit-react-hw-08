@@ -1,9 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
+import { NavLink as LinkRouter } from 'react-router-dom';
 import { selectIsLoggedIn, selectUser } from '../../redux/auth/selectors';
 import { logout } from '../../redux/auth/operations';
 import clsx from 'clsx';
 import css from './UserMenu.module.css';
+import { Button, Link } from '@mui/material';
 
 const UserMenu = () => {
   const buildCssClasses = ({ isActive }) =>
@@ -25,12 +26,13 @@ const UserMenu = () => {
   return (
     <div className={css.wrapper}>
       {isLoggedIn && <div className={css.text}>Hello, {userData.name}</div>}
-      <NavLink className={buildCssClasses} to="/contacts">
-        Contacts
-      </NavLink>
-      <button onClick={onLogout} type="button">
+      <Link href="#" component="span" variant="contained">
+        <LinkRouter to="/contacts">Contacts</LinkRouter>
+      </Link>
+
+      <Button onClick={onLogout} variant="contained" type="submit">
         Logout
-      </button>
+      </Button>
     </div>
   );
 };

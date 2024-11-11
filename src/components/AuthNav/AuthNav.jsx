@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import css from './AuthNav.module.css';
 import clsx from 'clsx';
+import { Button, Link } from '@mui/material';
 
 const AuthNav = () => {
   const buildCssClasses = ({ isActive }) =>
@@ -8,10 +9,10 @@ const AuthNav = () => {
 
   return (
     <div>
-      <NavLink className={buildCssClasses} to="/register">
+      <NavLink to="/register" className={buildCssClasses} color="inherit">
         Registration
       </NavLink>
-      <NavLink className={buildCssClasses} to="/login">
+      <NavLink to="/login" className={buildCssClasses} color="inherit">
         Login
       </NavLink>
     </div>

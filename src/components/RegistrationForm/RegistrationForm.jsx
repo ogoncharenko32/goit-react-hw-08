@@ -6,6 +6,9 @@ import css from './RegistrationForm.module.css';
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/operations';
 
+import * as React from 'react';
+import Button from '@mui/material/Button';
+
 const FeedbackSchema = Yup.object().shape({
   name: Yup.string()
     .min(3, 'Too Short!')
@@ -86,9 +89,12 @@ const RegistrationForm = () => {
             component="span"
           />
         </div>
-        <button className={clsx(css.formBtn)} type="submit">
+        <Button variant="contained" type="submit">
           Register
-        </button>
+        </Button>
+        {/* <button className={clsx(css.formBtn)} type="submit"> */}
+        {/* Register
+        </button> */}
       </Form>
     </Formik>
   );
